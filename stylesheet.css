@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Consolas';
+  src: url('fonts/CONSOLA.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; 
+}
+
+body {
+  font-family: 'Consolas', sans-serif; 
+  background-color: #1e1e1e;
+  color: white;
+}
+
+h1 {
+  font-family: 'Consolas';
+  color: white;
+}
+
+.syntax-error-border {
+  border: 3px solid #4E1E1C;
+  border-radius: 8px;
+}

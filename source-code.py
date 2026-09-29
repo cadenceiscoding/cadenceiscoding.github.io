@@ -1,0 +1,38 @@
+import random
+
+could = ["hold hands","watch shitty tv", "share drinks at dinner", "go for walks", "speak of the future kindly", "cry together", "talk about our fears", "be honest"]
+instead = ["snap", "respond drily", "think how I will resent becoming you", "steer clear", "sit silently", "let my eyes go unfocused", "tread softly when I leave the house", "point my frustration at easier targets"]
+
+we = random.randint(0,6)
+I = random.randint(0,7)
+
+print("I hope it is the symptom of being a daughter,")
+print("my inability to be amicable in your presence.")
+print("")
+print("we are of a height now,")
+print("though the fury at your assumed authority")
+print("makes me feel an inch taller.")
+print("")
+print("sometimes I forget the fight,")
+print("distance draining the red from my vision through")
+print("phone calls and texts where we")
+print("say I love you,")
+print("not much else.")
+print("")
+print("I return home with hopes that we could")
+print(could[we] +",")
+print("")
+print("dread how my hackles start to rise")
+print("at the bite of your sweet voice,")
+print("all the reasons I once longed to leave.")
+print("")
+print("it is instinct now")
+print("to " + instead[I] + ",")
+print("shore up my defenses")
+print("instead of dragging myself closer,")
+print("risking the battlefield for a chance of truce.")
+print("")
+print("I keep my vision blurry,")
+print("the enemy indistinct,")
+print("so I don't have to look too closely at")
+print("all the parts of you I find in myself.")

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Acceptance | Inner Machinations</title>
+
+</head>
+<body>
+  <p style="text-align: center;"><img src="images/banner.jpg"
+  title="Inner Machinations"
+  onmouseenter="this.src='images/bannerhover.jpg'"
+  onmouseleave="this.src='images/banner.jpg'" width="1000px"
+  alt="Banner"></p>
+<table border="0"
+style="border-collapse: collapse; width: 1000px; height: 136.333px; margin-left: auto; margin-right: auto;">
+  <tbody>
+    <tr style="height: 20.3333px;">
+      <td
+      style="width: 499.167px; padding: 1px; text-align: center;">
+        <a href="index.html" title="Home"><img
+          src="images/homebutton.jpg"
+          onmouseenter="this.src='images/homebuttonhover.jpg'"
+          onmouseleave="this.src='images/homebutton.jpg'"
+          width="400px" alt="Home button"></a></td>
+      <td
+      style="width: 499.167px; padding: 1px; text-align: center;">
+        <a href="statement.html" title="Artist's Statement"><img
+          src="images/statementbutton.jpg"
+          onmouseenter="this.src='images/statementbuttonhover.jpg'"
+          onmouseleave="this.src='images/statementbutton.jpg'"
+          width="400px" alt="Statement Button"></a></td>
+    </tr>
+    <tr style="height: 92.3333px;">
+      <td
+      style="padding: 1px; text-align: center; width: 998.334px;"
+      colspan="2">
+        <div class="hover-container" style="text-align: left;">
+          <p dir="ltr" style="text-align: left;">Let input
+            alphabet &sum; = {the English alphabet, ' ', '.', ',',
+            '\n'} (all letters in the English alphabet, spaces,
+            periods, commas and newline characters)</p>
+        </div>
+      </td>
+    </tr>
+    <tr style="height: 23.6667px;">
+      <td
+      style="padding: 1px; text-align: center; width: 998.334px;"
+      colspan="2">
+        <table border="0"
+        style="border-collapse: collapse; width: 1000px; margin-left: auto; margin-right: auto; height: 1450.67px;">
+          <tbody>
+            <tr style="height: 681.333px;">
+              <td
+              style="width: 497px; text-align: left; padding: 3px;">
+                <p>Formal description of this DFA:</p>
+                <p>States:&nbsp;</p>
+                <ul>
+                  <li>q0: start of a word, no 'a' has been seen yet
+                  </li>
+                  <li>q1 (accepting): word where an 'a' has been seen
+                  </li>
+                  <li>q2: \n seen (denoting the end of a line, DFA
+                    stays in this state until a new word begins or an
+                    invalid line begins)</li>
+                  <li>d: dead state</li>
+                </ul>
+                <p>Transitions:</p>
+                <p>From q0:&nbsp;</p>
+                <ul>
+                  <li>If an 'a' is read, go to q1</li>
+                  <li>If a \n, space, comma or period is read, go to
+                    d</li>
+                  <li>Else stay in q0</li>
+                </ul>
+                <p>From q1:</p>
+                <ul>
+                  <li>If a space is read, go to q0 (new word
+                    starting)</li>
+                  <li>If a \n is read, go to q2 (new line of poem
+                    starting)</li>
+                  <li>Else stay in q1</li>
+                </ul>
+                <p>From q2:</p>
+                <ul>
+                  <li>If a \n is read, stay in q2 (accounts for lines
+                    with no characters on them other than \n which
+                    separate stanzas)</li>
+                  <li>If a space, comma or period is read, go to d
+                    (invalid start to a line)</li>
+                  <li>If an 'a' is read, go to q1</li>
+                  <li>Else go to q0 (new word starting)</li>
+                </ul>
+                <p>From d:</p>
+                <ul>
+                  <li>On all input, stay in d</li>
+                </ul>
+              </td>
+              <td
+              style="width: 497px; padding: 3px; text-align: left;">
+                <img src="images/dfa.jpg" width="500px" alt="DFA">
+              </td>
+            </tr>
+            <tr style="height: 94.6667px;">
+              <td
+              style="text-align: left; padding: 3px; width: 994px;"
+              colspan="2">
+                <p style="text-align: center;">Ex. accepted input
+                  string = <span style="color: #ce9178;">"at dawn
+                    another anomaly starts,\nthat place underneath
+                    creating space anew,\ngrasping tears and
+                    pain.\n\nan aged heart became a roaring
+                    cavity,\nstartled angels anguishing
+                    above.\n\nearly death began,\ncatching many
+                    unaware,\ntaking targets\nall around.\n\nplease
+                    that machine,\nexact vengeance and\nchannel agony
+                    towards\ninternal intricacies."</span></p>
+              </td>
+            </tr>
+            <tr style="height: 649.333px;">
+              <td
+              style="text-align: left; padding: 3px; width: 994px;"
+              colspan="2">
+                <p dir="ltr"><span
+                  style="font-size: 14pt; color: #007acc;"><strong>Acceptance</strong></span>
+                </p>
+                <p dir="ltr"><span>at dawn another anomaly
+                    starts,</span></p>
+                <p dir="ltr"><span>that place underneath creating
+                    space anew,</span></p>
+                <p dir="ltr"><span>grasping tears and pain.</span>
+                </p>
+                <p><b>&nbsp;</b></p>
+                <p dir="ltr"><span>an aged heart became a roaring
+                    cavity,</span></p>
+                <p dir="ltr"><span>startled angels anguishing
+                    above.</span></p>
+                <p><b>&nbsp;</b></p>
+                <p dir="ltr"><span>early death began,</span></p>
+                <p dir="ltr"><span>catching many unaware,</span></p>
+                <p dir="ltr"><span>taking targets</span></p>
+                <p dir="ltr"><span>all around.</span></p>
+                <p><b>&nbsp;</b></p>
+                <p dir="ltr"><span>please that machine,</span></p>
+                <p dir="ltr"><span>exact vengeance and</span></p>
+                <p dir="ltr"><span>channel agony towards</span></p>
+                <p dir="ltr"><span>internal intricacies.</span></p>
+                <p dir="ltr"><span>&nbsp;</span></p>
+              </td>
+            </tr>
+            <tr style="height: 25.3333px;">
+              <td
+              style="width: 497px; text-align: left; padding: 3px;">
+                <span style="color: #007acc;"><a
+                  href="understanding.html"
+                  style="color: #007acc;">Previous</a></span></td>
+              <td
+              style="width: 497px; text-align: right; padding: 3px;">
+                <span style="color: #007acc;"><a
+                  href="malloc.html"
+                  style="color: #007acc;">Next</a></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

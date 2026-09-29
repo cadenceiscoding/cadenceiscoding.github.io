@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Home | Inner Machinations </title>
+
+    <style>
+    .hover-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .hover-popup {
+      position: absolute;
+      width: 500px;
+      display: none;
+      pointer-events: auto;
+    }
+
+    .hover-popup {
+        position: absolute;
+        width: 500px;
+        display: none;
+        pointer-events: auto;
+
+        border: 3px solid #4E1E1C;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.6); /* glow/shadow */
+    }
+
+    .hover-container:hover .hover-popup {
+      display: block;
+    }
+
+    .hover-popup {
+      top: 62%;
+      left: 80%;
+      transform: translate(-50%, -50%);
+    }
+    </style>
+
+</head>
+<body>
+  <p style="text-align: center;"><img src="images/banner.jpg" title="Inner Machinations" onmouseenter="this.src='images/bannerhover.jpg'"
+          onmouseleave="this.src='images/banner.jpg'"
+  width="1000px" alt="Banner"></p>
+<table border="0"
+style="border-collapse: collapse; width: 1000px; margin-left: auto; margin-right: auto;">
+  <tbody>
+    <tr>
+      <td
+      style="width: 498px; padding: 0.5px; text-align: center;">
+        <a href="index.html" title="Home"><img
+          src="images/homebutton.jpg"
+          onmouseenter="this.src='images/homebuttonhover.jpg'"
+          onmouseleave="this.src='images/homebutton.jpg'"
+          width="400px" alt="Home button"></a></td>
+      <td
+      style="width: 498px; padding: 0.5px; text-align: center;">
+        <a href="statement.html" title="Artist's Statement"><img
+          src="images/statementbutton.jpg"
+          onmouseenter="this.src='images/statementbuttonhover.jpg'"
+          onmouseleave="this.src='images/statementbutton.jpg'"
+          width="400px" alt="Statement Button"></a></td>
+    </tr>
+    <tr>
+      <td
+      style="padding: 0.5px; text-align: center; width: 996px;"
+      colspan="2">
+        <div class="hover-container"><img
+          src="images/if-then-else.jpg" width="1000px"
+          alt="If Then Else"> <a href="deleted-tokens.html"> <img
+            src="images/syntax-error.jpg" class="hover-popup"
+            alt="Popup"> </a></div>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5px; text-align: center;"
+      colspan="2"></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
